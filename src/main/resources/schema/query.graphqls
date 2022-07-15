@@ -1,0 +1,15 @@
+type Query {
+    reviews(searchInput: GetReviewRequest): [Review]
+}
+
+type Review {
+    username: String
+    starScore: Int
+    submittedDate: Date
+}
+
+input GetReviewRequest {
+    submittedDate: Date
+}
+
+scalar Date
